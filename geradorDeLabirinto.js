@@ -3,8 +3,8 @@ const ctx = canvas.getContext('2d');
 const canvasWidth = canvas.width;
 const canvasHeight = canvas.height;
 
-const nodeWidth = 50;
-const nodeHeight = 50;
+const nodeWidth = 80;
+const nodeHeight = 80;
 
 var jogador;
 var bagArestas
@@ -177,6 +177,7 @@ async function LetPlay() {
             clearInterval(cancellationToken)
             estadoJogo = false
             sleep(2000, 'você ganhou! Aperter enter para reiniciar').then()
+            window.location.reload()
         }
     }, 10)
 }
@@ -262,8 +263,5 @@ document.addEventListener('keydown', event => {
     console.log(jogador)
     if (ValidarMovimento(jogador, event.key, bagArestas)) {
         MovimentacaoJogador(jogador, event.key);
-    }
-    if (event.key == 'Enter') {
-        init()
     }
 })
