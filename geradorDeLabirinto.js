@@ -3,8 +3,8 @@ const ctx = canvas.getContext('2d');
 const canvasWidth = canvas.width;
 const canvasHeight = canvas.height;
 
-const nodeWidth = 40;
-const nodeHeight = 40;
+const nodeWidth = 50;
+const nodeHeight = 50;
 
 var jogador;
 var bagArestas
@@ -33,8 +33,8 @@ async function init() {
         aresta = SortearAresta(bagArestas);
         if (VerificarAresta(matriz, aresta)) {
             AbrirAresta(matriz, aresta);
-            // DesenharNumeros(matriz);
-            await sleep(10).then()
+            DesenharNumeros(matriz);
+            await sleep(500).then()
         }
     } while (!VerificarCaminho(matriz))
     Finish(matriz);
@@ -176,7 +176,7 @@ async function LetPlay() {
         if (jogador.ind == (matriz.length * matriz[0].length) - 1) {
             clearInterval(cancellationToken)
             estadoJogo = false
-            sleep(1000, 'você ganhou! Aperter enter para reiniciar').then()
+            sleep(2000, 'você ganhou! Aperter enter para reiniciar').then()
         }
     }, 10)
 }
