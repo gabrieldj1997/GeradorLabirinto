@@ -3,8 +3,8 @@ const ctx = canvas.getContext('2d');
 const canvasWidth = canvas.width;
 const canvasHeight = canvas.height;
 
-const nodeWidth = 80;
-const nodeHeight = 80;
+const nodeWidth = 40;
+const nodeHeight = 40;
 
 var jogador;
 var bagArestas
