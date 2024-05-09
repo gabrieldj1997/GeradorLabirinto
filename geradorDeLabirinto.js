@@ -33,8 +33,8 @@ async function init() {
         aresta = SortearAresta(bagArestas);
         if (VerificarAresta(matriz, aresta)) {
             AbrirAresta(matriz, aresta);
-            DesenharNumeros(matriz);
-            await sleep(500).then()
+            // DesenharNumeros(matriz);
+            await sleep(5).then()
         }
     } while (!VerificarCaminho(matriz))
     Finish(matriz);
